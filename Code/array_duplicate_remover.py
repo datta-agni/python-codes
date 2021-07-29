@@ -14,8 +14,13 @@ def duplicates(arr, n):
     return j
 
 
-arr = [1, 2, 2, 3, 4, 4, 4, 5, 5]
-n = len(arr)
-n = duplicates(arr, n)
-for i in range(n):
-    print("%d" % (arr[i]), end=" ")
+def main():
+    arr = [1, 2, 2, 3, 4, 4, 4, 5, 5]
+    n = len(arr)
+    n = duplicates(arr, n)
+    for i in range(n):
+        print("%d" % (arr[i]), end=" ")
+
+
+if __name__ == "__main__":
+    main()

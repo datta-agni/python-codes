@@ -1,8 +1,4 @@
 # A python program to create a basic calculator.
-print("    Choose the operator\n""1.Addition\t""2.Subtraction\t""3.Multiplication\t""4.Division\t""5.Exponents")
-ch = int(input("    Enter your choice:    "))
-a = float(input('Enter the first number:    '))
-b = float(input('Enter the second number:   '))
 
 
 def operator(ch):
@@ -19,32 +15,40 @@ def operator(ch):
 
 def add(a, b):
     c = a + b
-    # print(c)
     return c
 
 
 def sub(a, b):
     c = a - b
-    # print(c)
     return c
 
 
 def div(a, b):
     c = a / b
-    # print(c)
     return c
 
 
 def mul(a, b):
     c = a * b
-    # print(c)
     return c
 
 
 def exp(a, b):
     c = a ** b
-    # print(c)
     return c
 
 
-operator(ch)
+if __name__ == '__main__':
+    print('''
+            \nChoose the operator
+            \n1.) Addition
+            \n2.) Subtraction
+            \n3.) Multiplication
+            \n4.) Division
+            \n5.) Exponents
+            \n''')
+
+    ch = int(input('Enter your choice: '))
+    a = float(input('Enter the first number: '))
+    b = float(input('Enter the second number: '))
+    operator(ch)
