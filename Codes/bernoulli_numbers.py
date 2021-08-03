@@ -4,9 +4,9 @@ from fractions import Fraction as Fr
 def bernoulli():
     A, m = [], 0
     while True:
-        A.append(Fr(1, m+1))
+        A.append(Fr(1, m + 1))
         for j in range(m, 0, -1):
-            A[j-1] = j*(A[j-1] - A[j])
+            A[j - 1] = j * (A[j - 1] - A[j])
         yield A[0]  # (which is Bm)
         m += 1
 

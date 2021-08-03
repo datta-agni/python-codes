@@ -29,7 +29,7 @@ def main():
         if pr >= 7700:
             print(pr, end=', ')
     print(']')
-    print('10000th:\n  ', list(islice(emirp(), 10000-1, 10000)))
+    print('10000th:\n  ', list(islice(emirp(), 10000 - 1, 10000)))
 
 
 if __name__ == '__main__':

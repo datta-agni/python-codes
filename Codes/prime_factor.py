@@ -1,5 +1,5 @@
-# A function to print all prime factors of  
-# a given number n 
+# A function to print all prime factors of
+# a given number n
 # Python program to print prime factors
 import math
 
@@ -21,5 +21,10 @@ def primeFactors(n):
         print(n)
 
 
-n = int(input("ENTER ANY NUMBER"))
-primeFactors(n)
+def main():
+    n = int(input("ENTER ANY NUMBER"))
+    primeFactors(n)
+
+
+if __name__ == '__main__':
+    main()

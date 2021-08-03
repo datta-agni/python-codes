@@ -6,5 +6,11 @@ def print_factors(x):
             print(i)
 
 
-num = int(input("ENTER THE NUMBER FOR WHICH THE FACTOR IS TO BE CHECKED: "))
-print_factors(num)
+def main():
+    num = int(
+        input("ENTER THE NUMBER FOR WHICH THE FACTOR IS TO BE CHECKED: "))
+    print_factors(num)
+
+
+if __name__ == '__main__':
+    main()

@@ -1,5 +1,6 @@
 # Python program to find H.C.F of two numbers
 
+
 # define a function
 def compute_hcf(x, y):
     # choose the smaller number
@@ -13,7 +14,11 @@ def compute_hcf(x, y):
     return hcf
 
 
-num1 = int(input("ENTER THE 1st NUMBER:")
-num2 = int(input("ENTER THE 2nd NUMBER:")
+def main():
+    num1 = int(input("ENTER THE 1st NUMBER:"))
+    num2 = int(input("ENTER THE 2nd NUMBER:"))
+    print("The H.C.F. is", compute_hcf(num1, num2))
 
-print("The H.C.F. is", compute_hcf(num1, num2))
+
+if __name__ == '__main__':
+    main()

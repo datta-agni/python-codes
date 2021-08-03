@@ -34,7 +34,7 @@ def mul(a, b):
 
 
 def exp(a, b):
-    c = a ** b
+    c = a**b
     return c
 
 

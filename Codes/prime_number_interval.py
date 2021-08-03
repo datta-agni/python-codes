@@ -1,15 +1,21 @@
 # Python program to display all the prime numbers within an interval
 
-lower = int(input("ENTER THE LOWER LIMIT:"))
-upper = int(input("ENTER THE UPPER LIMIT:"))
 
-print("Prime numbers between", lower, "and", upper, "are:")
+def main():
+    lower = int(input("ENTER THE LOWER LIMIT:"))
+    upper = int(input("ENTER THE UPPER LIMIT:"))
 
-for num in range(lower, upper + 1):
-    # all prime numbers are greater than 1
-    if num > 1:
-        for i in range(2, num):
-            if (num % i) == 0:
-                break
-        else:
-            print(num)
+    print("Prime numbers between", lower, "and", upper, "are:")
+
+    for num in range(lower, upper + 1):
+        # all prime numbers are greater than 1
+        if num > 1:
+            for i in range(2, num):
+                if (num % i) == 0:
+                    break
+            else:
+                print(num)
+
+
+if __name__ == '__main__':
+    main()

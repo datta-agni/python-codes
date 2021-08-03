@@ -21,15 +21,12 @@ def palindrome_day(y):
 def main():
     # Count and samples of palindromic dates [2021..9999]
 
-    palindrome_dates = list(chain.from_iterable(
-        map(palindrome_day, range(2021, 10000))
-    ))
+    palindrome_dates = list(
+        chain.from_iterable(map(palindrome_day, range(2021, 10000))))
     for x in [
             'Count of palindromic dates [2021..9999]:',
-            len(palindrome_dates),
-            '\nFirst 15:',
-            '\n'.join(palindrome_dates[0:15]),
-            '\nLast 15:',
+            len(palindrome_dates), '\nFirst 15:',
+            '\n'.join(palindrome_dates[0:15]), '\nLast 15:',
             '\n'.join(palindrome_dates[-15:])
     ]:
         print(x)

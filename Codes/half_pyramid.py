@@ -6,11 +6,17 @@
 # 1 2 3 4
 # 1 2 3 4 5
 
-rows = int(input("ENTER THE NUMBERS:"))
 
-for row in range(1, rows + 1):
+def main():
+    rows = int(input("ENTER THE NUMBERS:"))
 
-    for column in range(1, row + 1):
-        print(column, end=" ")
+    for row in range(1, rows + 1):
 
-    print(" ")
+        for column in range(1, row + 1):
+            print(column, end=" ")
+
+        print(" ")
+
+
+if __name__ == '__main__':
+    main()

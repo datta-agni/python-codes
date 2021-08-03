@@ -1,5 +1,6 @@
 # Program to display the Fibonacci sequence up to n-th term
 
+
 def main():
     n_terms = int(input("How many terms? "))
 

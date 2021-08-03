@@ -1,5 +1,6 @@
 # This program prints various patterns
 
+
 def pattern1(level):
     '''This function prints the following pattern:
     *
@@ -68,21 +69,6 @@ def pattern5(level):
             print("*", end='')
         print()
 
-
-if __name__ == '__main__':
-    userInput = int(input('Enter the level: '))
-    pattern1(userInput)
-    print()
-    pattern2(userInput)
-    print()
-    pattern3(userInput)
-    print()
-    pattern4(userInput)
-    print()
-    pattern5(userInput)
-    print()
-
-
     def pattern6(userInput):
         '''
         following is the another approach to solve pattern problems with reduced time complexity 
@@ -102,3 +88,21 @@ if __name__ == '__main__':
         for i in string:
             x = x + 1
             print(string[0:x])
+
+
+def main():
+    userInput = int(input('Enter the level: '))
+    pattern1(userInput)
+    print()
+    pattern2(userInput)
+    print()
+    pattern3(userInput)
+    print()
+    pattern4(userInput)
+    print()
+    pattern5(userInput)
+    print()
+
+
+if __name__ == '__main__':
+    main()
