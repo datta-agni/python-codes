@@ -1,36 +1,47 @@
-from __future__ import print_function
-from prime_decomposition import primes, is_prime
-from heapq import *
-from itertools import islice
+# program to print emirp numbers less than n
+
+# Function to find reverse of any number
+def reverse(x):
+    rev = 0
+    while x > 0:
+        rev = (rev * 10) + x % 10
+        x = int(x / 10)
+    return rev
 
 
-def emirp():
-    largest = set()
-    emirps = []
-    heapify(emirps)
-    for pr in primes():
-        while emirps and pr > emirps[0]:
-            yield heappop(emirps)
-        if pr in largest:
-            yield pr
-        else:
-            rp = int(str(pr)[::-1])
-            if rp > pr and is_prime(rp):
-                heappush(emirps, pr)
-                largest.add(rp)
+# Sieve method used for generating emirp number (use of sieve of Eratosthenes)
+def print_emirp_primes(n):
+    # Create a boolean array "prime[0..n]" and initialize all entries it as true. A value in prime[i] will finally be false if i is Not a prime, else true.
+    prime = [1] * (n + 1)
+    p = 2
+
+    while p * p <= n:
+        # If prime[p] is not changed, then it is a prime
+        if prime[p] == 1:
+            # Update all multiples of p
+            for i in range(p * 2, n + 1, p):
+                prime[i] = 0
+
+        p += 1
+
+    # Traverse all prime numbers
+    for p in range(2, n + 1):
+        if prime[p] == 1:
+            # Find reverse a number
+            rev = reverse(p)
+
+            # A number is emrip if it is not a palindrome number and its reverse is also prime.
+            if p != rev and rev <= n and prime[rev] == 1:
+                print(p, rev, end=" ")
+
+                # Mark reverse prime as false so that it's not printed again
+                prime[rev] = 0
 
 
 def main():
-    print('First 20:\n  ', list(islice(emirp(), 20)))
-    print('Between 7700 and 8000:\n  [', end='')
-    for pr in emirp():
-        if pr >= 8000:
-            break
-        if pr >= 7700:
-            print(pr, end=', ')
-    print(']')
-    print('10000th:\n  ', list(islice(emirp(), 10000 - 1, 10000)))
+    n = int(input("Enter the limit: "))
+    print_emirp_primes(n)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

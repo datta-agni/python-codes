@@ -1,10 +1,7 @@
-# Python program to calculate
-# e raise to the power x
-# Function to calculate value
-# using sum of first n terms of
-# Taylor Series
+# Python program to calculate e raise to the power x
 
 
+# Function to calculate value using sum of first n terms of Taylor Series
 def exponential(n, x):
     # initialize sum of series
     sum = 1.0

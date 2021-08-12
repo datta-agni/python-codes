@@ -1,4 +1,4 @@
-# Python program to display all the prime numbers within an interval
+# program to display all the prime numbers within an interval
 
 
 def main():
@@ -17,5 +17,5 @@ def main():
                 print(num)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

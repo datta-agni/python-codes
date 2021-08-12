@@ -26,11 +26,14 @@ class LinearSearch:
 
 
 def main():
-    print("""
+    print
+    (
+        """
     Input format 
     first line contains space separated elements eg., 9 8 7 6 5 4 3 2 1 0
-    Second line contains the key to be searched  eg., 7
-    """)
+    Second line contains the key to be searched  eg., 5
+    """
+    )
     input = sys.stdin.read()
     data = list(map(int, input.split()))
     array = data[:-1]

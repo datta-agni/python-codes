@@ -35,13 +35,17 @@ def input_user(bin=True):
 def main():
 
     choice = int(
-        input('''Enter
-        \n1) to find the length of binary strings in bits:
+        input(
+            """
+        Enter
+        \n 1) to find the length of binary strings in bits:
         \n2) to convert decimal into binary:
         \n3) to convert binary to decimal:
         \n4) to check wether it is odd or even:
         \n5) to convert a binary number in 1's complement form:
-        \n'''))
+        \n"""
+        )
+    )
 
     if choice == 1:
         print(bit_length_of_binary((input_user(True))))

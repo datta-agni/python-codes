@@ -20,5 +20,5 @@ def print_fact():
         print("The factorial of", num, "is", factorial)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print_fact()

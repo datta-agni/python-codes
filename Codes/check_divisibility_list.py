@@ -1,12 +1,10 @@
 # check divisibility in a list of numbers
 
 
-def divisible(
-    n=int(input("Enter number of elements : ")),
-    num=int(input("Enter the number by which you want to check the divisibility: ")),
-):
+def divisible(n, num):
     # creating an empty list
     l = []
+
     # iterating till the range
     for i in range(0, n):
         element = int(input())
@@ -21,4 +19,8 @@ def divisible(
 
 
 if __name__ == "__main__":
-    divisible()
+    divisible
+    (
+        int(input("Enter number of elements : ")),
+        int(input("Enter the number by which you want to check the divisibility: ")),
+    )

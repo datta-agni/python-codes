@@ -6,8 +6,8 @@ def main():
 
     # Iterate 10 times from i = 1 to 10
     for i in range(1, 101):
-        print(num, 'x', i, '=', num * i)
+        print(num, "x", i, "=", num * i)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

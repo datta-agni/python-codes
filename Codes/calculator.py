@@ -34,21 +34,23 @@ def mul(a, b):
 
 
 def exp(a, b):
-    c = a**b
+    c = a ** b
     return c
 
 
-if __name__ == '__main__':
-    print('''
+if __name__ == "__main__":
+    print(
+        """
             \nChoose the operator
             \n1.) Addition
             \n2.) Subtraction
             \n3.) Multiplication
             \n4.) Division
             \n5.) Exponents
-            \n''')
+            \n"""
+    )
 
-    ch = int(input('Enter your choice: '))
-    a = float(input('Enter the first number: '))
-    b = float(input('Enter the second number: '))
+    ch = int(input("Enter your choice: "))
+    a = float(input("Enter the first number: "))
+    b = float(input("Enter the second number: "))
     operator(ch)

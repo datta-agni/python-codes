@@ -8,7 +8,7 @@ def find_gcd(x, y):
 
 
 def main():
-    n =int(input("Enter the number of elements: "))
+    n = int(input("Enter the number of elements: "))
     # creating an empty list
     l = []
     # iterating till the range
@@ -16,6 +16,7 @@ def main():
         element = int(input())
         l.append(element)  # adding the element
     print(l)
+
     num1 = l[0]
     num2 = l[1]
     gcd = find_gcd(num1, num2)
