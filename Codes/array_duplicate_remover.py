@@ -1,28 +1,26 @@
-# find duplicates in array
+# duplicate element in an array
 
-
-def duplicates(arr, n):
-    if n == 0 or n == 1:
-        return n
-    temp = list(range(n))
-    j = 0
-    for i in range(0, n - 1):
-        if arr[i] != arr[i + 1]:
-            temp[j] = arr[i]
-            j += 1
-        temp[j] = arr[n - 1]
-    j += 1
-    for i in range(0, j):
-        arr[i] = temp[i]
-    return j
+def duplicate_elements(arr, size):
+    print("The duplicate elements are: ")
+    for i in range(0, size):
+        if arr[abs(arr[i])] >= 0:
+            arr[abs(arr[i])] = -arr[abs(arr[i])]
+        else:
+            print(abs(arr[i]), end=" ")
 
 
 def main():
-    arr = [1, 2, 2, 3, 4, 4, 4, 5, 5]
-    n = len(arr)
-    n = duplicates(arr, n)
-    for i in range(n):
-        print("%d" % (arr[i]), end=" ")
+    # creating an empty list
+    n = int(input("Enter the number of elements: "))
+    array = []
+    # iterating till the range
+    for i in range(0, n):
+        element = int(input())
+        array.append(element)  # adding the element
+
+    print(array)
+    array_size = len(array)
+    duplicate_elements(array, array_size)
 
 
 if __name__ == "__main__":
