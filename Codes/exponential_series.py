@@ -14,6 +14,7 @@ def exponential(n, x):
 
 
 # Driver program to test above function
-n = int(input("ENTER THE N LIMIT"))
-x = int(input("ENTER THE X"))
-exponential(n, x)
+if __name__ == "__main__":
+    n = int(input("ENTER THE N LIMIT"))
+    x = int(input("ENTER THE X"))
+    exponential(n, x)
