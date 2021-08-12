@@ -1,4 +1,4 @@
-# Program to check Armstrong numbers in a certain interval
+# program to check Armstrong numbers in a certain interval
 
 
 def armstrong_limits(
