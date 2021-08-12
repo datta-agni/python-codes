@@ -4,9 +4,5 @@ def hello_world():
     print("HELLO! WORLD")
 
 
-def main():
-    hello_world()
-
-
 if __name__ == "__main__":
-    main()
+    hello_world()
