@@ -1,5 +1,6 @@
 # program to implement Stein's Algorithm
-# function to implement Stein's Algorithm
+
+
 def gcd(a, b):
     # GCD(0, b) == b; GCD(a, 0) == a, GCD(0, 0) == 0
     if a == 0:
