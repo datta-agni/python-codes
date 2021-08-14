@@ -1,7 +1,7 @@
 # program to check if the number is an armstrong number or not
 
 
-def main(num=int(input("Enter a number: "))):
+def is_armstrong(num):
     # initialize sum
     sum = 0
     num = 0
@@ -13,10 +13,14 @@ def main(num=int(input("Enter a number: "))):
         temp //= 10
     # display the result
     if num == sum:
-        print(num, "is an Armstrong number")
+        return True
     else:
-        print(num, "is not an Armstrong number")
+        False
 
 
 if __name__ == "__main__":
-    main()
+    num = int(input("Enter a number: "))
+    if is_armstrong(num):
+        print(num, "is an Armstrong number")
+    else:
+        print(num, "is not an Armstrong number")
