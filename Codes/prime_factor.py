@@ -22,8 +22,7 @@ def primeFactors(n):
 
 
 def main():
-    n = int(input("ENTER ANY NUMBER"))
-    primeFactors(n)
+    primeFactors(int(input("ENTER ANY NUMBER")))
 
 
 if __name__ == "__main__":

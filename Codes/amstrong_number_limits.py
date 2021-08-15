@@ -1,10 +1,7 @@
 # program to check Armstrong numbers in a certain interval
 
 
-def armstrong_limits(
-    lower=int(input("Enter the lower limit: ")),
-    upper=int(input("Enter the upper limit: ")) + 1,
-):
+def armstrong_limits(lower, upper):
     for num in range(lower, upper):
         # order of number
         order = len(str(num))
@@ -22,4 +19,5 @@ def armstrong_limits(
 
 
 if __name__ == "__main__":
-    armstrong_limits()
+    armstrong_limits
+    (int(input("Enter the lower limit: ")), int(input("Enter the upper limit: ")) + 1)

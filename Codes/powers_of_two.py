@@ -1,7 +1,7 @@
 # Display the powers of 2 using anonymous function
 
 
-def powers_of_two(terms=int(input("How many terms? "))):
+def powers_of_two(terms):
     # use anonymous function
     result = list(map(lambda x: 2 ** x, range(terms)))
     print("The total terms are:", terms)
@@ -10,4 +10,4 @@ def powers_of_two(terms=int(input("How many terms? "))):
 
 
 if __name__ == "__main__":
-    powers_of_two()
+    powers_of_two(int(input("How many terms? ")))

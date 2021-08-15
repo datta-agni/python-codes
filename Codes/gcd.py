@@ -1,4 +1,4 @@
-# Python program to find H.C.F of two numbers
+# program to find H.C.F of two numbers
 
 
 # define a function

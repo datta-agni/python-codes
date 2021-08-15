@@ -10,10 +10,11 @@ def divisible(n, num):
         element = int(input())
         # adding the element
         l.append(element)
-
     print(l)
+
     # use anonymous function to filter
     result = list(filter(lambda x: (x % num == 0), l))
+
     # display the result
     print("Numbers divisible by ", num, " are", result)
 

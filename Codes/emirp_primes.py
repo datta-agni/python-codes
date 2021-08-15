@@ -39,8 +39,7 @@ def print_emirp_primes(n):
 
 
 def main():
-    n = int(input("Enter the limit: "))
-    print_emirp_primes(n)
+    print_emirp_primes(int(input("Enter the limit: ")))
 
 
 if __name__ == "__main__":

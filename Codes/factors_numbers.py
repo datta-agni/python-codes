@@ -7,8 +7,8 @@ def print_factors(x):
 
 
 def main():
-    num = int(input("ENTER THE NUMBER FOR WHICH THE FACTOR IS TO BE CHECKED: "))
-    print_factors(num)
+    print_factors
+    (int(input("ENTER THE NUMBER FOR WHICH THE FACTOR IS TO BE CHECKED: ")))
 
 
 if __name__ == "__main__":

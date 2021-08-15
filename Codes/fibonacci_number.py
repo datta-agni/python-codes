@@ -1,8 +1,7 @@
 # Program to display the Fibonacci sequence up to n-th term
 
 
-def main():
-    n_terms = int(input("How many terms? "))
+def main(n_terms):
 
     # first two terms
     n1, n2 = 0, 1
@@ -16,6 +15,7 @@ def main():
         print(n1)
     else:
         print("Fibonacci sequence:")
+
         while count < n_terms:
             print(n1)
             nth = n1 + n2
@@ -26,4 +26,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main(int(input("How many terms? ")))
