@@ -1,4 +1,4 @@
-# Python program to calculate e raise to the power x
+# program to calculate e raise to the power x
 
 
 # Function to calculate value using sum of first n terms of Taylor Series
@@ -7,11 +7,11 @@ def exponential(n, x):
     sum = 1.0
     for i in range(n, 0, -1):
         sum = 1 + x * sum / i
-    print("e^x =", sum)
+    return sum
 
 
 # Driver program to test above function
 if __name__ == "__main__":
-    n = int(input("ENTER THE N LIMIT"))
-    x = int(input("ENTER THE X"))
-    exponential(n, x)
+    n = int(input("Enter the limit for number of terms: "))
+    x = int(input("Enter x for which the e^x is calculated: "))
+    print("e^x = ", exponential(n, x))
