@@ -1,23 +1,26 @@
 # To take input from the user
-def main():
-    num = int(input("Enter a number: "))
+def is_prime(num):
 
     # prime numbers are greater than 1
     if num > 1:
         # check for factors
         for i in range(2, num):
             if (num % i) == 0:
-                print(num, "is not a prime number")
-                print(i, "times", num // i, "is", num)
-                break
+                return False
+
         else:
-            print(num, "is a prime number")
+            return True
 
-    # if input number is less than
-    # or equal to 1, it is not prime
+    # if input number is less than or equal to 1, it is not prime
+    elif num <= 0:
+        return False
+
     else:
-        print(num, "is not a prime number")
+        return True
 
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    if is_prime(int(input("Enter a number: "))):
+        print("The number is prime!")
+    else:
+        print("The number is not prime!")

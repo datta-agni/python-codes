@@ -1,9 +1,5 @@
 # Taking kilometers input from the user
-def main(
-    choice=int(
-        input("Enter your choice \n1) Kilometres to Miles: \n2) Miles to Kilometres: ")
-    ),
-):
+def km_mile(choice):
     # conversion factor
     conversion_fac = 0.621371
 
@@ -23,4 +19,10 @@ def main(
 
 
 if __name__ == "__main__":
-    main()
+    km_mile(
+        int(
+            input(
+                "Enter your choice \n1) Kilometres to Miles: \n2) Miles to Kilometres: "
+            )
+        )
+    )
