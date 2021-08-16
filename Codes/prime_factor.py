@@ -27,8 +27,7 @@ def primeFactors(n):
 
 
 def main():
-    num = int(input("ENTER ANY NUMBER: "))
-    print(primeFactors(num))
+    print(primeFactors(int(input("ENTER ANY NUMBER: "))))
 
 
 if __name__ == "__main__":
