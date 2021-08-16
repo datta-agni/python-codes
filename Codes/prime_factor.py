@@ -2,7 +2,7 @@
 import math
 
 
-# prime
+# prime function
 def primeFactors(n):
     array = []
 
