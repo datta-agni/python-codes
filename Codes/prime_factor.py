@@ -1,28 +1,34 @@
-# A function to print all prime factors of
-# a given number n
-# Python program to print prime factors
+# A function to print all prime factors of a given number python program to print prime factors
 import math
 
 
 # prime
 def primeFactors(n):
+    array = []
+
     # no of even divisibility
     while n % 2 == 0:
-        print(2),
+        array.append(int(2)),
         n = n / 2
+
     # n reduces to become odd
     for i in range(3, int(math.sqrt(n)) + 1, 2):
+
         # while i divides n
         while n % i == 0:
-            print(i)
+            array.append(int(i))
             n = n / i
+
     # if n is a prime
     if n > 2:
-        print(n)
+        array.append(int(n))
+
+    return array
 
 
 def main():
-    primeFactors(int(input("ENTER ANY NUMBER")))
+    num = int(input("ENTER ANY NUMBER: "))
+    print(primeFactors(num))
 
 
 if __name__ == "__main__":
