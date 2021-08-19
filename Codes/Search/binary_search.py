@@ -7,49 +7,60 @@ TIme Complexity
     Average Case : O( log(n) )
     Best Case : O(1)
 Space Complexity : O(1)
-Binary Search is a sorting algorithm in which we select the mid element and compare key to the mid element if key is
-smaller then we search before mid else after mid. If key is found we return the index of key else -1.
+Binary Search is a sorting algorithm in which we select the middle element and compare key to the middle element if key is
+smaller then we search before middle else after middle. If key is found we return the index of key else -1.
+Iterative Binary Search Function method Python Implementation.
+It returns index of n in given array if present, else returns -1   
 """
 
-import sys
 
+def binary_search(array, n):
+    low = 0
+    high = len(array) - 1
+    middle = 0
 
-class BinarySearch:
-    def binary_search(self, array, key):
-        low = 0
-        high = len(array) - 1
-        while low <= high:
-            mid = low + (high - low) // 2
-            if array[mid] == key:
-                return mid
-            elif array[mid] < key:
-                low = mid + 1
-            else:
-                high = mid - 1
-        return -1
+    while low <= high:
+
+        # for get integer result
+        middle = (high + low) // 2
+
+        # Check if n is present at middle
+        if array[middle] < n:
+            low = middle + 1
+
+        # If n is greater, compare to the right of middle
+        elif array[middle] > n:
+            high = middle - 1
+
+        # If n is smaller, compared to the left of middle
+        else:
+            return middle
+            # element was not present in the list, return -1
+    return -1
 
 
 def main():
-    print(
-        """
-    ==============
-    Binary Search
-    ==============
-    
-    Input Format
-    first line contains space separated sorted elements eg., 0 1 2 3 4 5 6 7 8 9
-    Second line contains the key to be searched  eg., 3
-    """
-    )
-    input = sys.stdin.read()
-    data = list(map(int, input.split()))
-    array = data[:-1]
-    key = data[-1]
-    res = BinarySearch().binary_search(array, key)
-    if res == -1:
-        print("Key not found")
+    # Initial array, creating an empty array
+    array = []
+
+    # number of elements as input
+    n = int(input("Enter number of elements : "))
+    print("Enter the elements: ")
+    # iterating till the range
+    for i in range(0, n):
+        element = int(input())
+        # adding the element
+        array.append(element)
+
+    print(array)
+    number = int(input("Enter the number to be searched: "))
+    # Function call
+    result = binary_search(array, number)
+
+    if result != -1:
+        print("Element is present at index", str(result))
     else:
-        print("Key : '{}' found at index : {}".format(key, res + 1))
+        print("Element is not present in array")
 
 
 if __name__ == "__main__":
