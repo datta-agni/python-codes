@@ -14,35 +14,33 @@ else -1
 ------------
 """
 
-import sys
 
-
-class LinearSearch:
-    def linear_search(self, array, key):
-        for i in range(len(array)):
-            if array[i] == key:
-                return i
-        return -1
+def linear_Search(array, n, key):
+    # Searching array sequentially
+    for i in range(0, n):
+        if array[i] == key:
+            return i + 1
+    return -1
 
 
 def main():
-    print
-    (
-        """
-    Input format 
-    first line contains space separated elements eg., 9 8 7 6 5 4 3 2 1 0
-    Second line contains the key to be searched  eg., 5
-    """
-    )
-    input = sys.stdin.read()
-    data = list(map(int, input.split()))
-    array = data[:-1]
-    key = data[-1]
-    found = LinearSearch().linear_search(array, key)
-    if found == -1:
-        print("Key not found")
+    # creating an empty list
+    array = []
+    # number of elements as input
+    n = int(input("Enter number of elements : "))
+    # iterating till the range
+    for i in range(0, n):
+        element = int(input())
+        # adding the element
+        array.append(element)
+    print(array)
+
+    key = int(input("Enter the element to be searched: "))
+    res = linear_Search(array, n, key)
+    if res == -1:
+        print("Element not found")
     else:
-        print("Key is found at position : {}".format(found))
+        print("Element found at index: ", res)
 
 
 if __name__ == "__main__":
