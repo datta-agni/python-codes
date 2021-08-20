@@ -1,4 +1,5 @@
 # Configuration Files.
 *.ini
+# Main Files
+main.py
 *.pyc
-Codes/main.py
