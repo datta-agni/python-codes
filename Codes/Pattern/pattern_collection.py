@@ -103,6 +103,8 @@ def main():
     print()
     pattern5(userInput)
     print()
+    pattern5(userInput)
+    print()
 
 
 if __name__ == "__main__":
